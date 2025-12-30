@@ -2,6 +2,10 @@
 
 A secure, blockchain-powered digital identity verification platform built with React, TypeScript, and Supabase.
 
+## 📋 Project Status
+
+Check out [MVP_STATUS.md](MVP_STATUS.md) for a detailed breakdown of implemented and pending features.
+
 ## 🚀 Features
 
 ### Core Features
