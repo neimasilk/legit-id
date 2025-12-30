@@ -16,6 +16,7 @@ const DashboardPage: React.FC = () => {
       getIdentity(user.id)
       getRequests(user.id)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   const getStatusColor = (status: string) => {

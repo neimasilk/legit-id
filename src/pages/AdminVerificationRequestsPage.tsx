@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Eye, Check, X, Clock, User, FileText, Download, Calendar, Mail, Phone } from 'lucide-react';
+import { Search, Eye, Check, X, Clock, User, FileText, Download } from 'lucide-react';
 
 interface Document {
   id: string;

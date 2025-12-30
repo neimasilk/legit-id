@@ -6,7 +6,7 @@ import Header from '../components/Layout/Header'
 
 const VerificationRequestsPage: React.FC = () => {
   const { user } = useAuthStore()
-  const { requests, loading, updateRequest } = useVerificationStore()
+  const { updateRequest } = useVerificationStore()
 
   useEffect(() => {
     if (user) {

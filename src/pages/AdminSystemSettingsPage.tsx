@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, AlertTriangle, CheckCircle, Settings, Shield, Mail, Database, Globe, Lock, Bell } from 'lucide-react';
+import { Save, AlertTriangle, CheckCircle, Settings, Shield, Mail, Globe, Bell } from 'lucide-react';
 
 interface SystemSettings {
   general: {
