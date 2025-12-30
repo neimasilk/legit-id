@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Save, AlertTriangle, CheckCircle, Settings, Shield, Mail, Globe, Bell } from 'lucide-react';
 
 interface SystemSettings {

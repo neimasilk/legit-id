@@ -1,5 +1,4 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { renderHook, act } from '@testing-library/react'
 import { supabase } from '../lib/supabase'
 
 // Mock Supabase for database operations
@@ -116,7 +115,7 @@ describe('Database Integration Tests', () => {
     } as any)
 
     // Simulate updating verification status
-    const result = await supabase.from('verification_requests')
+    await supabase.from('verification_requests')
       .update({ status: 'approved', reviewed_at: new Date().toISOString() })
       .eq('id', 'req1')
     

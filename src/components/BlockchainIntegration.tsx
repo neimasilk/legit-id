@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AlertCircle, CheckCircle, Clock, ExternalLink, Wallet } from 'lucide-react';
 import { blockchainService } from '../services/blockchainService';
 
@@ -110,21 +110,6 @@ export default function BlockchainIntegration({
         return <AlertCircle className="h-5 w-5 text-red-500" />;
       default:
         return <Wallet className="h-5 w-5 text-gray-400" />;
-    }
-  };
-
-  const getStatusText = () => {
-    switch (status) {
-      case 'connecting':
-        return 'Connecting wallet...';
-      case 'registering':
-        return 'Registering identity on blockchain...';
-      case 'completed':
-        return 'Identity registered successfully!';
-      case 'error':
-        return error;
-      default:
-        return 'Ready to register on blockchain';
     }
   };
 

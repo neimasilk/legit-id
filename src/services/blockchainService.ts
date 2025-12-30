@@ -134,7 +134,7 @@ class BlockchainService {
       } else if (typeof window !== 'undefined' && (window as any).ethereum) {
         // Use MetaMask or other Web3 provider
         this.provider = new ethers.BrowserProvider((window as any).ethereum);
-        this.signer = await this.provider.getSigner();
+        this.signer = await (this.provider as ethers.BrowserProvider).getSigner();
       } else {
         // Fallback to default provider (read-only)
         this.provider = new ethers.JsonRpcProvider(this.config.rpcUrl);

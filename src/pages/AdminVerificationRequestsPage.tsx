@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Search, Eye, Check, X, Clock, User, FileText, Download } from 'lucide-react';
 
 interface Document {

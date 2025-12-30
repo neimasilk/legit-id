@@ -21,9 +21,7 @@ const IdentityCreatePage: React.FC = () => {
   
   const [currentStep, setCurrentStep] = useState(1)
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([])
-  const [blockchainTxHash, setBlockchainTxHash] = useState<string>('')
   const [blockchainError, setBlockchainError] = useState<string>('')
-  const [showBlockchain, setShowBlockchain] = useState(false)
   const [validationError, setValidationError] = useState<string>('')
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,7 +48,7 @@ const IdentityCreatePage: React.FC = () => {
   }
 
   const handleBlockchainComplete = (txHash: string) => {
-    setBlockchainTxHash(txHash)
+    console.log('Blockchain transaction complete:', txHash)
   }
 
   const handleBlockchainError = (error: string) => {

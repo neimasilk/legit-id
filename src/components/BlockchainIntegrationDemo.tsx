@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { blockchainService } from '../services/blockchainService';
 
 const BlockchainIntegrationDemo: React.FC = () => {
@@ -54,13 +54,6 @@ const BlockchainIntegrationDemo: React.FC = () => {
 
     try {
       setTransactionStatus('Verifying identity on blockchain...');
-      
-      const sampleIdentityData = {
-        fullName: 'John Doe',
-        dateOfBirth: '1990-01-01',
-        nationalId: '1234567890',
-        email: 'john.doe@example.com'
-      };
       
       const status = await blockchainService.getTransactionStatus(identityHash);
       setTransactionStatus(status === 'confirmed' ? 'Identity verification successful!' : `Transaction status: ${status}`);

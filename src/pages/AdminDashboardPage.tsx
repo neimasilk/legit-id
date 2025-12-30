@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Users, FileCheck, AlertCircle, TrendingUp, UserCheck, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { useAuthStore } from '../stores/authStore';
 
@@ -21,7 +21,7 @@ interface RecentActivity {
 
 export default function AdminDashboardPage() {
   const { user } = useAuthStore();
-  const [stats, setStats] = useState<Stats>({
+  const [stats] = useState<Stats>({
     totalUsers: 1247,
     verifiedUsers: 856,
     pendingVerifications: 23,
@@ -100,7 +100,7 @@ export default function AdminDashboardPage() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-          <p className="text-gray-600 mt-2">Welcome back, {user?.fullName || 'Admin'}</p>
+          <p className="text-gray-600 mt-2">Welcome back, {user?.full_name || 'Admin'}</p>
         </div>
 
         {/* Stats Grid */}

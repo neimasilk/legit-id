@@ -1,10 +1,18 @@
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_SUPABASE_URL: string
+  readonly VITE_SUPABASE_ANON_KEY: string
+  readonly VITE_APP_NAME: string
+  readonly VITE_APP_URL: string
+  readonly VITE_ETHEREUM_RPC_URL?: string
+  readonly VITE_CONTRACT_ADDRESS?: string
+}
+
 interface ImportMeta {
-  env: {
-    VITE_SUPABASE_URL: string
-    VITE_SUPABASE_ANON_KEY: string
-    VITE_APP_NAME: string
-    VITE_APP_URL: string
-    VITE_ETHEREUM_RPC_URL?: string
-    VITE_CONTRACT_ADDRESS?: string
-  }
+  readonly env: ImportMetaEnv
+}
+
+interface Window {
+  ethereum: any;
 }
