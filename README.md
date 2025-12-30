@@ -67,7 +67,7 @@ A secure, blockchain-powered digital identity verification platform built with R
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-org/legit-id.git
+git clone https://github.com/neimasilk/legit-id.git
 cd legit-id
 ```
 
