@@ -22,8 +22,10 @@ const RegisterPage: React.FC = () => {
       return
     }
     
-    await register(email, password, fullName, role)
-    navigate('/dashboard')
+    const success = await register(email, password, fullName, role)
+    if (success) {
+      navigate('/dashboard')
+    }
   }
 
   return (

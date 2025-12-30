@@ -13,8 +13,8 @@ const LoginPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      await login(email, password)
-      if (!error) {
+      const success = await login(email, password)
+      if (success) {
         navigate('/dashboard')
       }
     } catch (err) {
