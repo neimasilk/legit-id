@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Users, FileCheck, AlertCircle, TrendingUp, UserCheck, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { useAuthStore } from '../stores/authStore';
+import Header from '../components/Layout/Header';
 
 interface Stats {
   totalUsers: number;
@@ -96,6 +98,7 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -225,18 +228,18 @@ export default function AdminDashboardPage() {
             </div>
             <div className="p-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <button className="bg-blue-50 hover:bg-blue-100 text-blue-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                <Link to="/admin/users" className="bg-blue-50 hover:bg-blue-100 text-blue-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
                   <Users className="w-5 h-5" />
                   <span>Manage Users</span>
-                </button>
-                <button className="bg-green-50 hover:bg-green-100 text-green-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                </Link>
+                <Link to="/admin/verification-requests" className="bg-green-50 hover:bg-green-100 text-green-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
                   <FileCheck className="w-5 h-5" />
                   <span>Review Requests</span>
-                </button>
-                <button className="bg-yellow-50 hover:bg-yellow-100 text-yellow-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                </Link>
+                <Link to="/admin/settings" className="bg-yellow-50 hover:bg-yellow-100 text-yellow-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
                   <AlertCircle className="w-5 h-5" />
                   <span>System Alerts</span>
-                </button>
+                </Link>
                 <button className="bg-purple-50 hover:bg-purple-100 text-purple-700 py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
                   <TrendingUp className="w-5 h-5" />
                   <span>View Reports</span>

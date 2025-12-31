@@ -219,13 +219,9 @@ npm run dev
 npm run build
 ```
 
-### Deployment Options
-- **Vercel**: One-click deployment
-- **Netlify**: Static site hosting
-- **AWS S3 + CloudFront**: Scalable hosting
-- **Docker**: Containerized deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+### Deployment
+- **Vercel (Current)**: This repository is configured with `vercel.json` for SPA rewrites. Pushes to the default branch on GitHub trigger automatic deployments on Vercel.
+- **Preview Locally**: `npm run preview` serves the production build locally for validation before pushing.
 
 ## 📊 Performance
 
@@ -270,6 +266,10 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
 - [Component Library](docs/components.md)
 - [Testing Guide](docs/testing.md)
 - [Contributing Guide](CONTRIBUTING.md)
+
+### Testing Reports
+- [MVP Playwright Report](TEST_REPORT_MVP.md)
+- [Admin Playwright Report](TEST_REPORT_ADMIN.md)
 
 ## 🤝 Contributing
 

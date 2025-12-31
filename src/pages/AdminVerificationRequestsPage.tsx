@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, Eye, Check, X, Clock, User, FileText, Download } from 'lucide-react';
+import Header from '../components/Layout/Header';
 
 interface Document {
   id: string;
@@ -178,6 +179,7 @@ export default function AdminVerificationRequestsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
